@@ -1,5 +1,5 @@
 export default class Validator {
-  validateUserName = (name) => {
+  static validateUserName = (name) => {
     const required = /^[A-Za-z0-9_-]+$/g.test(name);
     const firstSymb = /^[\d_-]/.test(name);
     const lastSymb = /[\d_-]$/.test(name);
@@ -11,7 +11,3 @@ export default class Validator {
     return false;
   };
 }
-
-const data = new Map();
-data.set(11);
-// console.log(data.set(11));
